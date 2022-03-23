@@ -1,0 +1,23 @@
+/*
+ * @lc app=leetcode id=283 lang=golang
+ *
+ * [283] Move Zeroes
+ */
+
+// @lc code=start
+func moveZeroes(nums []int) {
+	if len(nums) <= 1 {
+		return
+	}
+
+	left := 0
+	for right := 0; right < len(nums); right++ {
+		if nums[right] != 0 {
+			nums[left], nums[right] = nums[right], nums[left]
+			left++
+		}
+	}
+}
+
+// @lc code=end
+
