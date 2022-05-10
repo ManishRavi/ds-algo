@@ -5,6 +5,9 @@
  */
 
 // @lc code=start
+
+// * Backtracking Solution | O(4^n) Time | O(n) Space
+
 func letterCombinations(digits string) []string {
 	if len(digits) <= 0 {
 		return []string{}
