@@ -2,6 +2,8 @@ package main
 
 import "sort"
 
+// * Backtracking Solution | O(n!) Time | O(n) Space
+
 func permuteUnique(nums []int) [][]int {
 	if len(nums) <= 0 {
 		return [][]int{}
