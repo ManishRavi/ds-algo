@@ -1,14 +1,16 @@
 package main
 
+// * Dynamic Programming Solution | O(mn) Time | O(n) Space
+
 func uniquePathsWithObstacles(obstacleGrid [][]int) int {
 	if len(obstacleGrid) <= 0 || len(obstacleGrid[0]) <= 0 || obstacleGrid[0][0] == 1 {
 		return 0
 	}
 
-	m, n := len(obstacleGrid), len(obstacleGrid[0])
-	dp := make([]int, n)
-	for i := 0; i < m; i++ {
-		for j := 0; j < n; j++ {
+	ROWS, COLS := len(obstacleGrid), len(obstacleGrid[0])
+	dp := make([]int, COLS)
+	for i := 0; i < ROWS; i++ {
+		for j := 0; j < COLS; j++ {
 			if obstacleGrid[i][j] == 1 {
 				dp[j] = 0
 			} else if i == 0 && j == 0 {
@@ -19,5 +21,5 @@ func uniquePathsWithObstacles(obstacleGrid [][]int) int {
 		}
 	}
 
-	return dp[n-1]
+	return dp[COLS-1]
 }

@@ -6,7 +6,7 @@
 
 // @lc code=start
 
-// * Recursive DFS Memoization Solution | O(nm) Time | O(nm) Space
+// * Recursive DFS Memoization Solution | O(mn) Time | O(mn) Space
 
 func longestIncreasingPath(matrix [][]int) int {
 	ROWS, COLS := len(matrix), len(matrix[0])
