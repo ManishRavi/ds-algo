@@ -5,9 +5,12 @@
  */
 
 // @lc code=start
+
+// * Math Solution | O(n) Time | O(1) Space
+
 func missingNumber(nums []int) int {
-	n := len(nums)
-	total, sum := (n*(n+1))/2, 0
+	numsSize := len(nums)
+	total, sum := (numsSize*(numsSize+1))/2, 0
 	for _, v := range nums {
 		sum += v
 	}
