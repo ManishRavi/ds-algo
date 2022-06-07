@@ -12,6 +12,9 @@
  *     Next *ListNode
  * }
  */
+
+// * Iterative Solution | O(m+n) Time | O(1) Space
+
 func getIntersectionNode(headA, headB *ListNode) *ListNode {
 	if headA == nil || headB == nil {
 		return nil
