@@ -1,5 +1,7 @@
 package main
 
+// * Two Pointer Solution | O(m+n) Time | O(1) Space
+
 func merge(nums1 []int, m int, nums2 []int, n int) {
 	if (m == 0 && n == 0) || n == 0 {
 		return
