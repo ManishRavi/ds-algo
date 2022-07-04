@@ -3,7 +3,7 @@ package main
 import "sort"
 
 // * Sorting Based Solution | O(hlogh) + O(wlogw) Time | O(1) Space
-// * h --> Total Height, w --> Total Width
+// * h -> Total Height, w -> Total Width
 
 func maxArea(h int, w int, horizontalCuts []int, verticalCuts []int) int {
 	sort.Ints(horizontalCuts)
