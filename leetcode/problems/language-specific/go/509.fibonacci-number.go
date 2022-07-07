@@ -5,6 +5,10 @@
  */
 
 // @lc code=start
+
+// * Recursive Memoization Solution | O(n) Time | O(n) Space
+// * n -> n
+
 func fib(n int) int {
 	if n <= 1 {
 		return n
@@ -28,6 +32,9 @@ func fibHelper(n int, memcache []int) int {
 }
 
 // @lc code=end
+
+// * Iterative Solution | O(n) Time | O(1) Space
+// * n -> n
 
 func fibIterative(n int) int {
 	if n <= 1 {

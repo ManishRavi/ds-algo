@@ -1,5 +1,16 @@
 package main
 
+/*
+ * @lc app=leetcode id=509 lang=golang
+ *
+ * [509] Fibonacci Number
+ */
+
+// @lc code=start
+
+// * Recursive Memoization Solution | O(n) Time | O(n) Space
+// * n -> n
+
 func fib(n int) int {
 	if n <= 1 {
 		return n
@@ -21,6 +32,11 @@ func fibHelper(n int, memcache []int) int {
 	memcache[n] = fibHelper(n-1, memcache) + fibHelper(n-2, memcache)
 	return memcache[n]
 }
+
+// @lc code=end
+
+// * Iterative Solution | O(n) Time | O(1) Space
+// * n -> n
 
 func fibIterative(n int) int {
 	if n <= 1 {
