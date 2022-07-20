@@ -1,5 +1,16 @@
 package main
 
+/*
+ * @lc app=leetcode id=118 lang=golang
+ *
+ * [118] Pascal's Triangle
+ */
+
+// @lc code=start
+
+// * Iterative Solution | O(n^2) Time | O(n) Space
+// * n -> Total number of rows
+
 func generate(numRows int) [][]int {
 	if numRows == 0 {
 		return [][]int{}
@@ -21,3 +32,5 @@ func generate(numRows int) [][]int {
 
 	return res
 }
+
+// @lc code=end

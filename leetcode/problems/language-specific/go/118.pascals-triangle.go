@@ -5,6 +5,10 @@
  */
 
 // @lc code=start
+
+// * Iterative Solution | O(n^2) Time | O(n) Space
+// * n -> Total number of rows
+
 func generate(numRows int) [][]int {
 	if numRows == 0 {
 		return [][]int{}
