@@ -5,6 +5,10 @@
  */
 
 // @lc code=start
+
+// * Iterative Solution | O(n) Time | O(1) Space
+// * n -> Number of nodes in a linked list
+
 /**
  * Definition for singly-linked list.
  * type ListNode struct {
