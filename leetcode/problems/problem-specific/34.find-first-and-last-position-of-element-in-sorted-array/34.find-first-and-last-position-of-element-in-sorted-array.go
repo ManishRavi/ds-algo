@@ -1,5 +1,16 @@
 package main
 
+/*
+ * @lc app=leetcode id=34 lang=golang
+ *
+ * [34] Find First and Last Position of Element in Sorted Array
+ */
+
+// @lc code=start
+
+// * Binary Search Solution | O(logn) Time | O(1) Space
+// * n -> Length of nums array
+
 func searchRange(nums []int, target int) []int {
 	if len(nums) <= 0 {
 		return []int{-1, -1}
@@ -35,3 +46,5 @@ func searchRange(nums []int, target int) []int {
 
 	return res
 }
+
+// @lc code=end

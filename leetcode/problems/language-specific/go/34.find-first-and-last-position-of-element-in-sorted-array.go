@@ -5,6 +5,10 @@
  */
 
 // @lc code=start
+
+// * Binary Search Solution | O(logn) Time | O(1) Space
+// * n -> Length of nums array
+
 func searchRange(nums []int, target int) []int {
 	if len(nums) <= 0 {
 		return []int{-1, -1}
