@@ -8,7 +8,7 @@ package main
 
 // @lc code=start
 
-// * Recursive Solution | O(n) Time | O(n) Space
+// * Recursive Solution | O(n) Time | O(h) Space
 // * n -> Number of nodes in a tree
 
 // Definition for a binary tree node.
