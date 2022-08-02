@@ -1,5 +1,16 @@
 package main
 
+/*
+ * @lc app=leetcode id=62 lang=golang
+ *
+ * [62] Unique Paths
+ */
+
+// @lc code=start
+
+// * Bottom-Up Iterative Solution | O(m^n) Time | O(n) Space
+// * m -> Number of rows | n -> Number of columns
+
 func uniquePaths(m int, n int) int {
 	if m == 0 || n == 0 {
 		return 0
@@ -18,3 +29,5 @@ func uniquePaths(m int, n int) int {
 
 	return dp[n-1]
 }
+
+// @lc code=end
