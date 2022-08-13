@@ -7,7 +7,7 @@
 # @lc code=start
 
 # * Hash Table Solution | O(n) Time | O(n) Space
-# * n -> Length of nums array
+# * n -> The length of nums array
 
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
