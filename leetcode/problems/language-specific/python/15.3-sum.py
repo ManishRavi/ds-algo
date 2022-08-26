@@ -37,10 +37,9 @@ class Solution:
                 else:
                     right -= 1
 
-            while i+1 < nums_length-2 and nums[i] == nums[i+1]:
+            i_val = nums[i]
+            while i < nums_length-2 and i_val == nums[i]:
                 i += 1
-
-            i += 1
 
         return result
 
