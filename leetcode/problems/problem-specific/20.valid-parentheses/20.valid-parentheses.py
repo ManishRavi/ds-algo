@@ -13,16 +13,20 @@ class Solution:
     def isValid(self, s: str) -> bool:
         s_stack = []
         for c in s:
-            if c == '(' or \
-                    c == '{' or \
-                    c == '[':
+            if (
+                c == '(' or
+                c == '{' or
+                c == '['
+            ):
                 s_stack.append(c)
 
             else:
-                if not s_stack or \
-                        c == ')' and not s_stack[-1] == '(' or \
-                        c == '}' and not s_stack[-1] == '{' or \
-                        c == ']' and not s_stack[-1] == '[':
+                if (
+                    not s_stack or
+                    c == ')' and not s_stack[-1] == '(' or
+                    c == '}' and not s_stack[-1] == '{' or
+                    c == ']' and not s_stack[-1] == '['
+                ):
                     return False
 
                 s_stack.pop()

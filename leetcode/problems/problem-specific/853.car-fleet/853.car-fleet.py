@@ -11,14 +11,14 @@
 
 class Solution:
     def carFleet(self, target: int, position: List[int], speed: List[int]) -> int:
-        # * Stores a pair of the position and the speed of a car
-        # * Pair -> (position, speed)
+        # * Stores a pair of the position and the speed of a car.
+        # * Pair -> (position, speed).
         cars = [car for car in zip(position, speed)]
-        # * Sort in descending order based upon the position
+        # * Sort in descending order based on the position.
         cars.sort(key=lambda x: -x[0])
         stack = []
-        for cur_position, cur_speed in cars:
-            travel_time = (target - cur_position) / cur_speed
+        for position, speed in cars:
+            travel_time = (target - position) / speed
             if not stack or travel_time > stack[-1]:
                 stack.append(travel_time)
 

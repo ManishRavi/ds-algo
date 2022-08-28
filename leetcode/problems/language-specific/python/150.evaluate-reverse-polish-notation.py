@@ -7,26 +7,29 @@
 # @lc code=start
 
 # * Stack Solution | O(n) Time | O(n) Space
-# * n -> The number of operands in tokens array
+# * n -> The length of tokens array
 
 class Solution:
     def evalRPN(self, tokens: List[str]) -> int:
-        # * Stores the operands
+        # * Stores the operands.
         tokens_stack = []
         for s in tokens:
+            # * Push the operands into the stack.
             if s != '+' and s != '-' and s != '*' and s != '/':
                 tokens_stack.append(int(s))
+
+            # * Evaluate the operation by popping the 2 most recent operands from the stack.
             else:
-                val1, val2 = tokens_stack.pop(), tokens_stack.pop()
+                val2, val1 = tokens_stack.pop(), tokens_stack.pop()
                 operation_result = 0
                 if s == '+':
                     operation_result = val1 + val2
                 elif s == '-':
-                    operation_result = val2 - val1
+                    operation_result = val1 - val2
                 elif s == '*':
                     operation_result = val1 * val2
                 elif s == '/':
-                    operation_result = int(val2/val1)
+                    operation_result = int(val1 / val2)
 
                 tokens_stack.append(operation_result)
 
