@@ -3,6 +3,7 @@ PARENT_PATH="leetcode/problems"
 LANGUAGE_SPECIFIC_DIRECTORY_NAME="language-specific"
 PROBLEM_SPECIFIC_DIRECTORY_NAME="problem-specific"
 LANGUAGE="python"
+COUNT=0
 
 
 cd ../$LANGUAGE_SPECIFIC_DIRECTORY_NAME/$LANGUAGE
@@ -22,9 +23,12 @@ do
         # pwd
         problemSpecificPath=../../$PROBLEM_SPECIFIC_DIRECTORY_NAME/$problemName
         echo "COPY | $fileName | ${problemSpecificPath:6:${#problemSpecificPath}}"
+        
         mkdir -p "$problemSpecificPath"
         cp "$fileName" "$problemSpecificPath"
+
+        COUNT=$((COUNT+1))
     fi
 done
 
-echo "Done!"
+echo "$COUNT files copied successfully!"

@@ -14,7 +14,7 @@ class Solution:
         result = nums[0]
         left, right = 0, len(nums) - 1
         while left <= right:
-            # * If the array is already sorted from left to right
+            # * If the array is already sorted from left to right.
             if nums[left] < nums[right]:
                 result = min(result, nums[left])
                 break

@@ -25,5 +25,16 @@
 			""
 		],
 		"description": ""
+	},
+	"2": {
+		"scope": "",
+		"prefix": "RDFSS",
+		"body": [
+			"",
+			"# * Recursive DFS Solution | O(n$1) Time | O(h$2) Space",
+			"# * n -> The number of nodes in the tree | h -> The height of the tree $0",
+			""
+		],
+		"description": ""
 	}
 }

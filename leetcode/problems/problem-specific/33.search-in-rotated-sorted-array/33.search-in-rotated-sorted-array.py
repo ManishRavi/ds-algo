@@ -17,17 +17,17 @@ class Solution:
             if nums[mid] == target:
                 return mid
 
-            # * If left half is sorted
+            # * If the left half is sorted.
             elif nums[left] <= nums[mid]:
-                # * find if target lies on left half or not
+                # * If the target lies on the left half.
                 if nums[left] <= target <= nums[mid]:
                     right = mid - 1
                 else:
                     left = mid + 1
 
-            # * If right half is sorted
+            # * If the right half is sorted.
             else:
-                # * find if target lies on right half or not
+                # * If the target lies on the right half.
                 if nums[mid] <= target <= nums[right]:
                     left = mid + 1
                 else:
