@@ -15,7 +15,7 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// },
-	"1": {
+	"TPSWS": {
 		"scope": "",
 		"prefix": "TPSWS",
 		"body": [
@@ -26,9 +26,9 @@
 		],
 		"description": ""
 	},
-	"2": {
+	"RTDFSS": {
 		"scope": "",
-		"prefix": "RDFSS",
+		"prefix": "RTDFSS",
 		"body": [
 			"",
 			"# * Recursive DFS Solution | O(n$1) Time | O(h$2) Space",
@@ -36,5 +36,38 @@
 			""
 		],
 		"description": ""
-	}
+	},
+	"ITBFSS": {
+		"scope": "",
+		"prefix": "ITBFSS",
+		"body": [
+			"",
+			"# * Iterative BFS Solution | O(n$1) Time | O(n$2) Space",
+			"# * n -> The number of nodes in the tree $0",
+			""
+		],
+		"description": ""
+	},
+	"RGDFSS": {
+		"scope": "",
+		"prefix": "RGDFSS",
+		"body": [
+			"",
+			"# * Recursive DFS Solution | O(mn$1) Time | O(1$2) Space",
+			"# * m -> The number of rows in the $3 matrix | n -> The number of columns in the $3 matrix $0",
+			""
+		],
+		"description": ""
+	},
+	"IGBFSS": {
+		"scope": "",
+		"prefix": "IGBFSS",
+		"body": [
+			"",
+			"# * Iterative BFS Solution | O(mn$1) Time | O(mn$2) Space",
+			"# * m -> The number of rows in the $3 matrix | n -> The number of columns in the $3 matrix $0",
+			""
+		],
+		"description": ""
+	},
 }
