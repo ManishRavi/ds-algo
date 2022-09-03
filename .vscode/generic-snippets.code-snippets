@@ -48,6 +48,17 @@
 		],
 		"description": ""
 	},
+	"ITBLOTS": {
+		"scope": "",
+		"prefix": "ITBLOTS",
+		"body": [
+			"",
+			"# * Iterative BFS Level Order Traversal Solution | O(n$1) Time | O(n$2) Space",
+			"# * n -> The number of nodes in the tree $0",
+			""
+		],
+		"description": ""
+	},
 	"RGDFSS": {
 		"scope": "",
 		"prefix": "RGDFSS",
