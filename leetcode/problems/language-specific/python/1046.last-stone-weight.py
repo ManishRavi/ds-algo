@@ -14,10 +14,10 @@ class Solution:
         max_heap = [-stone for stone in stones]
         heapq.heapify(max_heap)
         while len(max_heap) > 1:
-            y, x = -1 * heapq.heappop(max_heap), -1 * heapq.heappop(max_heap)
+            y, x = -heapq.heappop(max_heap), -heapq.heappop(max_heap)
             if x != y:
                 heapq.heappush(max_heap, -(y - x))
 
-        return -1 * max_heap[0] if len(max_heap) >= 1 else 0
+        return -max_heap[0] if len(max_heap) >= 1 else 0
 
 # @lc code=end
