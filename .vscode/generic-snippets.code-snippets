@@ -81,4 +81,15 @@
 		],
 		"description": ""
 	},
+	"BS": {
+		"scope": "",
+		"prefix": "BS",
+		"body": [
+			"",
+			"# * Backtracking Solution | O(n*(2^n)$1) Time | O(n$2) Space",
+			"# * n -> The length of $3 array $0",
+			""
+		],
+		"description": ""
+	},
 }

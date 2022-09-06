@@ -1,7 +1,7 @@
 #
-# @lc app=leetcode id=39 lang=python3
+# @lc app=leetcode id=40 lang=python3
 #
-# [39] Combination Sum
+# [40] Combination Sum II
 #
 
 # @lc code=start
@@ -10,10 +10,11 @@
 # * n -> The length of candidates array | t -> Given target
 
 class Solution:
-    def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
+    def combinationSum2(self, candidates: List[int], target: int) -> List[List[int]]:
         result = []
+        candidates.sort()
 
-        def combinationSumHelper(start=0, target=target, combination=[]):
+        def combinationSum2Helper(start=0, target=target, combination=[]):
             if target < 0:
                 return
             if target == 0:
@@ -21,11 +22,14 @@ class Solution:
                 return
 
             for i in range(start, len(candidates)):
+                if i > start and candidates[i] == candidates[i - 1]:
+                    continue
+
                 combination.append(candidates[i])
-                combinationSumHelper(i, target - candidates[i], combination)
+                combinationSum2Helper(i + 1, target - candidates[i], combination)
                 combination.pop()
 
-        combinationSumHelper()
+        combinationSum2Helper()
         return result
 
 # @lc code=end

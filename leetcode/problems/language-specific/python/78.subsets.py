@@ -7,23 +7,19 @@
 # @lc code=start
 
 # * Backtracking Solution | O(n*(2^n)) Time | O(n) Space
-# * n -> The number of nums array
+# * n -> The length of nums array
 
 class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
         result = []
 
-        def subsetsHelper(index=0, subset=[]):
-            if index == len(nums):
-                result.append(subset[:])
-                return
+        def subsetsHelper(start=0, subset=[]):
+            result.append(subset[:])
 
-            # * Include nums[index]
-            subset.append(nums[index])
-            subsetsHelper(index + 1, subset)
-            # * Don't include nums[index]
-            subset.pop()
-            subsetsHelper(index + 1, subset)
+            for i in range(start, len(nums)):
+                subset.append(nums[i])
+                subsetsHelper(i + 1, subset)
+                subset.pop()
 
         subsetsHelper()
         return result
