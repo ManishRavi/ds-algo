@@ -9,10 +9,11 @@
 # * Floyd's Tortoise and Hare Cycle Detection Solution | O(n) Time | O(1) Space
 # * n -> The length of nums array
 
+
 class Solution:
     def findDuplicate(self, nums: List[int]) -> int:
         # * Find the intersection point of the two runners.
-        slow, fast = 0, 0
+        slow = fast = 0
         while True:
             slow = nums[slow]
             fast = nums[nums[fast]]
@@ -26,5 +27,6 @@ class Solution:
             slow2 = nums[slow2]
             if slow == slow2:
                 return slow
+
 
 # @lc code=end

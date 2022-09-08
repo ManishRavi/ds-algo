@@ -9,6 +9,7 @@
 # * Iterative Solution | O(n^2) Time | O(1) Space
 # * n -> The number of rows and columns in the matrix
 
+
 class Solution:
     def rotate(self, matrix: List[List[int]]) -> None:
         """
@@ -18,8 +19,8 @@ class Solution:
         self.reverse(matrix)
 
     def transpose(self, matrix: List[List[int]]) -> None:
-        """ 
-        transpose transposes the input matrix. 
+        """
+        Transposes the input matrix in-place.
         """
         ROWS, COLS = len(matrix), len(matrix[0])
         for row in range(ROWS):
@@ -28,9 +29,10 @@ class Solution:
 
     def reverse(self, matrix: List[List[int]]) -> None:
         """
-        reverse reverses each row in the input matrix.
+        Reverses each row in the input matrix in-place.
         """
         for row in range(len(matrix)):
             matrix[row].reverse()
+
 
 # @lc code=end

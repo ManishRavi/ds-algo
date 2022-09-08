@@ -7,25 +7,27 @@
 # @lc code=start
 
 # * Backtracking Solution | O(n*(2^t)) Time | O(n) Space
-# * n -> The length of candidates array | t -> Given target
+# * n -> The length of candidates array | t -> The given input target
+
 
 class Solution:
     def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
-        result = []
+        res = []
 
-        def combinationSumHelper(start=0, target=target, combination=[]):
+        def combinationSumHelper(start_idx, target, combination):
             if target < 0:
                 return
             if target == 0:
-                result.append(combination[:])
+                res.append(combination[:])
                 return
 
-            for i in range(start, len(candidates)):
+            for i in range(start_idx, len(candidates)):
                 combination.append(candidates[i])
                 combinationSumHelper(i, target - candidates[i], combination)
                 combination.pop()
 
-        combinationSumHelper()
-        return result
+        combinationSumHelper(0, target, [])
+        return res
+
 
 # @lc code=end

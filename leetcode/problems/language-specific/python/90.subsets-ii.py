@@ -9,23 +9,25 @@
 # * Backtracking Solution | O(n*(2^n)) Time | O(n) Space
 # * n -> The length of nums array
 
+
 class Solution:
     def subsetsWithDup(self, nums: List[int]) -> List[List[int]]:
-        result = []
+        res = []
         nums.sort()
 
-        def subsetsWithDupHelper(start=0, subset=[]):
-            result.append(subset[:])
+        def subsetsWithDupHelper(start_idx, subset):
+            res.append(subset[:])
 
-            for i in range(start, len(nums)):
-                if i > start and nums[i] == nums[i - 1]:
+            for i in range(start_idx, len(nums)):
+                if i > start_idx and nums[i] == nums[i - 1]:
                     continue
 
                 subset.append(nums[i])
                 subsetsWithDupHelper(i + 1, subset)
                 subset.pop()
 
-        subsetsWithDupHelper()
-        return result
+        subsetsWithDupHelper(0, [])
+        return res
+
 
 # @lc code=end

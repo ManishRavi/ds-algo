@@ -9,14 +9,18 @@
 # * Iterative Math and Dummy Head Solution | O(max(m, n)) Time | O(1) Space
 # * m -> The number of nodes in the linked list l1 | n -> The number of nodes in the linked list l2
 
+
 # Definition for singly-linked list.
 # class ListNode:
 #     def __init__(self, val=0, next=None):
 #         self.val = val
 #         self.next = next
 
+
 class Solution:
-    def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
+    def addTwoNumbers(
+        self, l1: Optional[ListNode], l2: Optional[ListNode]
+    ) -> Optional[ListNode]:
         dummy_head = ListNode()
         cur = dummy_head
         carry = 0

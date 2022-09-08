@@ -6,8 +6,9 @@
 
 # @lc code=start
 
-# * Fast and Slow Pointer Solution | O(n) Time | O(1) Space
+# * Fast & Slow Pointer Solution | O(n) Time | O(1) Space
 # * n -> The number of nodes in the linked list
+
 
 # Definition for singly-linked list.
 # class ListNode:
@@ -15,18 +16,19 @@
 #         self.val = val
 #         self.next = next
 
+
 class Solution:
     def isPalindrome(self, head: Optional[ListNode]) -> bool:
         if not head or not head.next:
             return True
 
-        # * Find the middle of the linked list
-        slow, fast = head, head
+        # * Find the middle of the linked list.
+        slow = fast = head
         while fast and fast.next:
             slow = slow.next
             fast = fast.next.next
 
-        # * Reverse the linked list from the middle to end
+        # * Reverse the linked list from the middle to end.
         prev = None
         while slow:
             next = slow.next
@@ -34,13 +36,15 @@ class Solution:
             prev = slow
             slow = next
 
-        # * Compare the values from the start to middle with middle to end (reversed)
+        # * Compare the values from the start to middle with middle to end (reversed).
+        cur = head
         while prev:
-            if head.val != prev.val:
+            if cur.val != prev.val:
                 return False
 
-            head, prev = head.next, prev.next
+            cur, prev = cur.next, prev.next
 
         return True
+
 
 # @lc code=end

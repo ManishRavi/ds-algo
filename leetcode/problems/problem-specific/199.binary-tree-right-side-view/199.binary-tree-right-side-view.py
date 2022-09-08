@@ -9,6 +9,7 @@
 # * Iterative BFS Level Order Traversal Solution | O(n) Time | O(n) Space
 # * n -> The number of nodes in the tree
 
+
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
@@ -16,12 +17,14 @@
 #         self.left = left
 #         self.right = right
 
+
 class Solution:
     def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
-        result = []
+        res = []
         if not root:
-            return result
+            return res
 
+        # * Start BFS traversal.
         queue = collections.deque([root])
         while queue:
             right_most_node = None
@@ -32,10 +35,10 @@ class Solution:
                     queue.append(cur_node.left)
                 if cur_node.right:
                     queue.append(cur_node.right)
-
             if right_most_node:
-                result.append(right_most_node.val)
+                res.append(right_most_node.val)
 
-        return result
+        return res
+
 
 # @lc code=end

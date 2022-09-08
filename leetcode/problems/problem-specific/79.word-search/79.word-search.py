@@ -7,8 +7,9 @@
 # @lc code=start
 
 # * Backtracking Solution | O(mn*(4^w)) Time | O(w) Space
-# * m -> The number of rows in the board matrix | n -> The number of columns in the board matrix
-# * w -> The length of the word
+# * m -> The number of rows in the board matrix | n -> The number of columns in the board matrix |
+# * w -> The length of the word string
+
 
 class Solution:
     def exist(self, board: List[List[str]], word: str) -> bool:
@@ -17,25 +18,26 @@ class Solution:
         if ROWS * COLS < len(word):
             return False
 
-        def existHelper(row=0, col=0, idx=0):
-            if idx == len(word):
+        def existHelper(row, col, word_idx):
+            if word_idx == len(word):
                 return True
-
             if (
-                not 0 <= row <= ROWS - 1 or
-                not 0 <= col <= COLS - 1 or
-                board[row][col] != word[idx] or
-                board[row][col] == '*'
+                not 0 <= row <= ROWS - 1
+                or not 0 <= col <= COLS - 1
+                or board[row][col] == "*"
+                or board[row][col] != word[word_idx]
             ):
                 return False
 
-            prev_val = board[row][col]
-            board[row][col] = '*'
+            cur_val = board[row][col]
+            board[row][col] = "*"
             is_exist = False
             for d_row, d_col in DIRECTIONS:
-                is_exist = is_exist or existHelper(row + d_row, col + d_col, idx + 1)
+                is_exist = is_exist or existHelper(
+                    row + d_row, col + d_col, word_idx + 1
+                )
 
-            board[row][col] = prev_val
+            board[row][col] = cur_val
             return is_exist
 
         for row in range(ROWS):
@@ -44,5 +46,6 @@ class Solution:
                     return True
 
         return False
+
 
 # @lc code=end

@@ -9,17 +9,18 @@
 # * Binary Search Based On Search Insert Position Solution | O(1) Set, O(logn) Get Time | O(n) Space
 # * n -> The number of values per key
 
+
 class TimeMap:
     def __init__(self):
-        # * Stores an array of a pair of value and timestamp per key
+        # * Stores an array of a pair of value and timestamp per key.
         # * Pair -> (value, timestamp)
-        self.key_value_store = collections.defaultdict(list)
+        self.key_value_map = collections.defaultdict(list)
 
     def set(self, key: str, value: str, timestamp: int) -> None:
-        self.key_value_store[key].append((value, timestamp))
+        self.key_value_map[key].append((value, timestamp))
 
     def get(self, key: str, timestamp: int) -> str:
-        values = self.key_value_store[key]
+        values = self.key_value_map[key]
         left, right = 0, len(values) - 1
         while left <= right:
             mid = left + (right - left) // 2

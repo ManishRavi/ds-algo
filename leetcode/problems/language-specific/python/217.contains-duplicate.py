@@ -9,6 +9,7 @@
 # * Hash Table Solution | O(n) Time | O(n) Space
 # * n -> The length of nums array
 
+
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
         nums_set = set()
@@ -19,5 +20,6 @@ class Solution:
             nums_set.add(num)
 
         return False
+
 
 # @lc code=end

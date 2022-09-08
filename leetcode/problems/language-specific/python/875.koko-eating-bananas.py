@@ -7,7 +7,8 @@
 # @lc code=start
 
 # * Binary Search Solution | O(m*log(max(p))) | O(1) Space
-# * m -> The length of piles array | p -> Given piles array
+# * m -> The length of piles array | p -> The given input piles array
+
 
 class Solution:
     def minEatingSpeed(self, piles: List[int], h: int) -> int:
@@ -16,8 +17,8 @@ class Solution:
         while left <= right:
             mid = left + (right - left) // 2
             total_hours = 0
-            for bananas in piles:
-                total_hours += math.ceil(bananas / mid)
+            for banana in piles:
+                total_hours += math.ceil(banana / mid)
             if total_hours <= h:
                 k = min(k, mid)
                 right = mid - 1
@@ -25,5 +26,6 @@ class Solution:
                 left = mid + 1
 
         return k
+
 
 # @lc code=end

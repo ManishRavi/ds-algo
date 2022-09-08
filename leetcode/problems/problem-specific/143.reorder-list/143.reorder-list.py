@@ -6,14 +6,16 @@
 
 # @lc code=start
 
-# * Fast and Slow Pointer Solution | O(n) Time | O(1) Space
+# * Fast & Slow Pointer Solution | O(n) Time | O(1) Space
 # * n -> The number of nodes in the linked list
+
 
 # Definition for singly-linked list.
 # class ListNode:
 #     def __init__(self, val=0, next=None):
 #         self.val = val
 #         self.next = next
+
 
 class Solution:
     def reorderList(self, head: Optional[ListNode]) -> None:
@@ -23,13 +25,13 @@ class Solution:
         if not head or not head.next:
             return
 
-        # * Find the middle of the linked list
-        slow, fast = head, head
+        # * Find the middle of the linked list.
+        slow = fast = head
         while fast and fast.next:
             slow = slow.next
             fast = fast.next.next
 
-        # * Reverse the linked list from the middle to end
+        # * Reverse the linked list from the middle to end.
         prev = None
         while slow:
             next = slow.next
@@ -37,12 +39,13 @@ class Solution:
             prev = slow
             slow = next
 
-        # * Merge two halves
+        # * Merge two halves.
         first, second = head, prev
         while second and second.next:
             next1, next2 = first.next, second.next
             first.next = second
             second.next = next1
             first, second = next1, next2
+
 
 # @lc code=end

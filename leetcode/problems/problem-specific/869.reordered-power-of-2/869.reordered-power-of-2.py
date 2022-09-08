@@ -7,7 +7,8 @@
 # @lc code=start
 
 # * Hash Table and Counting Solution | O(logn) Time | O(logn) Space
-# * n -> Given input n
+# * n -> The given input
+
 
 class Solution:
     def reorderedPowerOf2(self, n: int) -> bool:
@@ -17,5 +18,6 @@ class Solution:
         # * we can just check whether N has the same digits as any of these possibilities.
         n_counter = collections.Counter(str(n))
         return any(n_counter == collections.Counter(str(1 << i)) for i in range(30))
+
 
 # @lc code=end

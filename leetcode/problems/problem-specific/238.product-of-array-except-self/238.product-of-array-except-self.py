@@ -9,20 +9,22 @@
 # * Prefix & Suffix Products Solution | O(n) Time | O(1) Space
 # * n -> The length of nums array
 
+
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
-        nums_length = len(nums)
-        result = [1] * nums_length
+        nums_len = len(nums)
+        res = [1] * nums_len
         prefix = 1
-        for i in range(nums_length):
-            result[i] = prefix
+        for i in range(nums_len):
+            res[i] = prefix
             prefix *= nums[i]
 
         suffix = 1
-        for i in range(nums_length-1, -1, -1):
-            result[i] *= suffix
+        for i in range(nums_len - 1, -1, -1):
+            res[i] *= suffix
             suffix *= nums[i]
 
-        return result
+        return res
+
 
 # @lc code=end

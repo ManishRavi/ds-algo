@@ -9,11 +9,13 @@
 # * Iterative Dummy Head Solution | O(n) Time | O(1) Space
 # * n -> The number of nodes in the linked list
 
+
 # Definition for singly-linked list.
 # class ListNode:
 #     def __init__(self, val=0, next=None):
 #         self.val = val
 #         self.next = next
+
 
 class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
@@ -28,5 +30,6 @@ class Solution:
             cur = next
 
         return dummy_head.next
+
 
 # @lc code=end

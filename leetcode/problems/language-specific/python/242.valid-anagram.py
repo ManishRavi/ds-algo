@@ -7,7 +7,8 @@
 # @lc code=start
 
 # * Hash Table Solution | O(n) Time | O(n) Space
-# * n -> The length of s or t
+# * n -> The length of s or t string
+
 
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
@@ -15,11 +16,12 @@ class Solution:
             return False
 
         t_counter = collections.Counter(t)
-        for c in s:
-            t_counter[c] -= 1
-            if t_counter[c] < 0:
+        for char in s:
+            t_counter[char] -= 1
+            if t_counter[char] < 0:
                 return False
 
         return True
+
 
 # @lc code=end

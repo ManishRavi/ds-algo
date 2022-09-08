@@ -9,6 +9,7 @@
 # * Hash Table and Prefix Tree Solution | O(n) Time | O(n) Space
 # * n -> The number of characters in a given word
 
+
 class TrieNode:
     def __init__(self):
         # * Stores a key-value pair where the key is a character and value is an array of TrieNodes.
@@ -23,33 +24,29 @@ class Trie:
 
     def insert(self, word: str) -> None:
         cur = self.root
-        for c in word:
-            if c not in cur.children:
-                cur.children[c] = TrieNode()
-
-            cur = cur.children[c]
-
+        for char in word:
+            if char not in cur.children:
+                cur.children[char] = TrieNode()
+            cur = cur.children[char]
         cur.is_word_end = True
 
     def search(self, word: str) -> bool:
-        return self.__find_helper(word, True)
+        return self._find_helper(word, True)
 
     def startsWith(self, prefix: str) -> bool:
-        return self.__find_helper(prefix, False)
+        return self._find_helper(prefix, False)
 
-    def __find_helper(self, word: str, is_search: bool) -> bool:
-        """
-        Returns if the word is in the trie or if there is any word in the trie 
-        that starts with the given prefix based on the is_search flag.
+    def _find_helper(self, word: str, is_full_word_search: bool) -> bool:
+        """Returns if the word is in the trie or if there is any word in the trie
+        that starts with the given prefix based on the is_full_word_search flag.
         """
         cur = self.root
-        for c in word:
-            if c not in cur.children:
+        for char in word:
+            if char not in cur.children:
                 return False
 
-            cur = cur.children[c]
-
-        return cur.is_word_end if is_search else True
+            cur = cur.children[char]
+        return cur.is_word_end if is_full_word_search else True
 
 
 # Your Trie object will be instantiated and called as such:

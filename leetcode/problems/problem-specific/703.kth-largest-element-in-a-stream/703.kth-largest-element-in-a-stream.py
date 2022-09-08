@@ -7,21 +7,22 @@
 # @lc code=start
 
 # * Priority Queue (Min Heap) Solution | O(nlogk) Time | O(k) Space
-# * n -> The length of nums array | k -> Given input k
+# * n -> The length of nums array | k -> The given input
+
 
 class KthLargest:
     def __init__(self, k: int, nums: List[int]):
         self.k = k
         self.min_heap = nums
         heapq.heapify(self.min_heap)
-        self.__pop_from_heap()
+        self._pop_from_heap()
 
     def add(self, val: int) -> int:
         heapq.heappush(self.min_heap, val)
-        self.__pop_from_heap()
+        self._pop_from_heap()
         return self.min_heap[0]
 
-    def __pop_from_heap(self) -> None:
+    def _pop_from_heap(self) -> None:
         while len(self.min_heap) > self.k:
             heapq.heappop(self.min_heap)
 

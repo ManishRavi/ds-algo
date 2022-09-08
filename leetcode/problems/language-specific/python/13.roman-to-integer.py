@@ -9,10 +9,11 @@
 # * Hash Table Solution | O(n) Time | O(1) Space
 # * n -> The length of s string
 
+
 class Solution:
     def romanToInt(self, s: str) -> int:
-        s_length = len(s)
-        ROMAN_SYMBOLS = {
+        s_len = len(s)
+        ROMAN_DIGIT_MAP = {
             "I": 1,
             "V": 5,
             "X": 10,
@@ -22,19 +23,18 @@ class Solution:
             "M": 1000,
         }
 
-        result = 0
+        res = 0
         i = 0
-        while i < s_length-1:
-            cur_val, next_val = ROMAN_SYMBOLS[s[i]], ROMAN_SYMBOLS[s[i+1]]
+        while i < s_len - 1:
+            cur_val, next_val = ROMAN_DIGIT_MAP[s[i]], ROMAN_DIGIT_MAP[s[i + 1]]
             if next_val > cur_val:
-                result += next_val - cur_val
+                res += next_val - cur_val
                 i += 1
-
             else:
-                result += cur_val
-
+                res += cur_val
             i += 1
 
-        return result if i == s_length else result+ROMAN_SYMBOLS[s[i]]
+        return res if i == s_len else res + ROMAN_DIGIT_MAP[s[i]]
+
 
 # @lc code=end
