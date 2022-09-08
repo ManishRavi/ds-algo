@@ -9,6 +9,7 @@
 # * Iterative BFS Level Order Traversal Solution | O(n) Time | O(n) Space
 # * n -> The number of nodes in the tree
 
+
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
@@ -16,9 +17,14 @@
 #         self.left = left
 #         self.right = right
 
+
 class Solution:
     def averageOfLevels(self, root: Optional[TreeNode]) -> List[float]:
-        result = []
+        res = []
+        if not root:
+            return res
+
+        # * Start BFS traversal.
         queue = collections.deque([root])
         while queue:
             level_order_values = []
@@ -29,9 +35,9 @@ class Solution:
                     queue.append(cur_node.left)
                 if cur_node.right:
                     queue.append(cur_node.right)
+            res.append(sum(level_order_values) / len(level_order_values))
 
-            result.append(sum(level_order_values) / len(level_order_values))
+        return res
 
-        return result
 
 # @lc code=end

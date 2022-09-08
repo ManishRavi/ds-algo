@@ -9,6 +9,7 @@
 # * Recursive DFS Solution | O(n) Time | O(n) Space
 # * n -> The number of nodes in the tree
 
+
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
@@ -16,35 +17,38 @@
 #         self.left = left
 #         self.right = right
 
+
 class Solution:
     def buildTree(self, preorder: List[int], inorder: List[int]) -> Optional[TreeNode]:
-        cur_preorder_index, inorder_index_mappings = 0, {}
+        preorder_idx, inorder_idx_val_map = 0, {}
         # * Build a hashmap to store value -> its index mappings.
+        # * Key -> Value | Value -> Index
         for idx, val in enumerate(inorder):
-            inorder_index_mappings[val] = idx
+            inorder_idx_val_map[val] = idx
 
         def buildTreeHelper(left, right):
-            nonlocal cur_preorder_index
+            nonlocal preorder_idx
 
             # * If there are no elements to construct the tree.
             if left > right:
                 return None
 
-            # * Select the cur_preorder_index element as the root and increment it.
-            root_value = preorder[cur_preorder_index]
-            inorder_root_value_index = inorder_index_mappings[root_value]
-            cur_preorder_index += 1
+            # * Select the preorder_idx element as the root and increment it.
+            root_val = preorder[preorder_idx]
+            inorder_root_val_idx = inorder_idx_val_map[root_val]
+            preorder_idx += 1
 
             # * Build left and right subtree
-            # * excluding inorder_index_mappings[root_value] element because it's the root.
+            # * excluding inorder_idx_val_map[root_val] element because it's the root.
             root = TreeNode(
-                root_value,
-                buildTreeHelper(left, inorder_root_value_index - 1),
-                buildTreeHelper(inorder_root_value_index + 1, right)
+                root_val,
+                buildTreeHelper(left, inorder_root_val_idx - 1),
+                buildTreeHelper(inorder_root_val_idx + 1, right),
             )
 
             return root
 
         return buildTreeHelper(0, len(inorder) - 1)
+
 
 # @lc code=end

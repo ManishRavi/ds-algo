@@ -9,13 +9,14 @@
 # * Backtracking Solution | O(n*(n!)) Time | O(n) Space
 # * n -> The length of nums array
 
+
 class Solution:
     def permute(self, nums: List[int]) -> List[List[int]]:
-        result = []
+        res = []
 
-        def permuteHelper(used=set(), permutation=[]):
+        def permuteHelper(used, permutation):
             if len(permutation) == len(nums):
-                result.append(permutation[:])
+                res.append(permutation[:])
                 return
 
             for num in nums:
@@ -28,7 +29,8 @@ class Solution:
                 permutation.pop()
                 used.remove(num)
 
-        permuteHelper()
-        return result
+        permuteHelper(set(), [])
+        return res
+
 
 # @lc code=end

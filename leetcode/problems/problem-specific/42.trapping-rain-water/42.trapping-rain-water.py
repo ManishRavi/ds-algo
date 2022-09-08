@@ -9,32 +9,31 @@
 # * Two Pointers Solution | O(n) Time | O(1) Space
 # * n -> The length of height array
 
+
 class Solution:
     def trap(self, height: List[int]) -> int:
-        height_length = len(height)
-        left, right = 0, height_length-1
+        height_len = len(height)
+        left, right = 0, height_len - 1
         left_max, right_max = 0, 0
-        result = 0
+        res = 0
         while left < right:
             cur_left_val, cur_right_val = height[left], height[right]
-            # * Left Half
+            # * Search in left half.
             if cur_left_val <= cur_right_val:
                 if cur_left_val >= left_max:
                     left_max = cur_left_val
                 else:
-                    result += left_max - cur_left_val
-
+                    res += left_max - cur_left_val
                 left += 1
-
-            # * Right Half
+            # * Search in right half.
             else:
                 if cur_right_val >= right_max:
                     right_max = cur_right_val
                 else:
-                    result += right_max - cur_right_val
-
+                    res += right_max - cur_right_val
                 right -= 1
 
-        return result
+        return res
+
 
 # @lc code=end

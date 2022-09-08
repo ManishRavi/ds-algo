@@ -9,16 +9,17 @@
 # * Hash Table Solution | O(mn) Time | O(n) Space
 # * m -> The length of strs array | n -> The length of each string
 
+
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-        result = collections.defaultdict(list)
+        res = collections.defaultdict(list)
         for s in strs:
-            counter = [0] * 26
-            for c in s:
-                counter[ord(c)-ord('a')] += 1
+            counts = [0] * 26
+            for char in s:
+                counts[ord(char) - ord("a")] += 1
+            res[tuple(counts)].append(s)
 
-            result[tuple(counter)].append(s)
+        return res.values()
 
-        return result.values()
 
 # @lc code=end

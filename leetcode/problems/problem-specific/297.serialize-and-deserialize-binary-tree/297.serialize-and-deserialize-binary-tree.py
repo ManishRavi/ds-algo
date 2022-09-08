@@ -9,12 +9,14 @@
 # * Recursive DFS Preorder Traversal Solution | O(n) Time | O(h) Space
 # * n -> The number of nodes in the tree | h -> The height of the tree
 
+
 # Definition for a binary tree node.
 # class TreeNode(object):
 #     def __init__(self, x):
 #         self.val = x
 #         self.left = None
 #         self.right = None
+
 
 class Codec:
     def serialize(self, root):
@@ -23,7 +25,6 @@ class Codec:
         :type root: TreeNode
         :rtype: str
         """
-
         inorder = []
 
         def serializeHelper(root):
@@ -36,7 +37,7 @@ class Codec:
             serializeHelper(root.right)
 
         serializeHelper(root)
-        return ','.join(inorder)
+        return ",".join(inorder)
 
     def deserialize(self, data):
         """Decodes your encoded data to tree.
@@ -46,19 +47,14 @@ class Codec:
         """
 
         def deserializeHelper(nodes):
-            value = next(nodes)
-            if value == str(None):
+            cur_val = next(nodes)
+            if cur_val == str(None):
                 return None
 
-            root = TreeNode(
-                value,
-                deserializeHelper(nodes),
-                deserializeHelper(nodes)
-            )
-
+            root = TreeNode(cur_val, deserializeHelper(nodes), deserializeHelper(nodes))
             return root
 
-        return deserializeHelper(iter(data.split(',')))
+        return deserializeHelper(iter(data.split(",")))
 
 
 # Your Codec object will be instantiated and called as such:

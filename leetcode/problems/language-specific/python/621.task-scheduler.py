@@ -9,6 +9,7 @@
 # * Priority Queue (Max Heap) and Queue Solution | O(n) Time | O(n) Space
 # * n -> The length of tasks array
 
+
 class Solution:
     def leastInterval(self, tasks: List[str], n: int) -> int:
         if n <= 0:
@@ -22,7 +23,6 @@ class Solution:
         # * Stores a pair of count and available time.
         # * Pair -> (count, available_at)
         queue = collections.deque()
-
         while max_heap or queue:
             total_time += 1
             # * If the heap is empty then update total_time to 1st element in the queue
@@ -40,5 +40,6 @@ class Solution:
                 heapq.heappush(max_heap, queue.popleft()[0])
 
         return total_time
+
 
 # @lc code=end

@@ -9,19 +9,20 @@
 # * Hash Table and Priority Queue (Max Heap) Solution | O(nlogn) Time | O(n) Space
 # * n -> The length of arr array
 
+
 class Solution:
     def minSetSize(self, arr: List[int]) -> int:
-        arr_length = len(arr)
+        arr_len = len(arr)
         arr_counter = collections.Counter(arr)
-        max_heap = []
-        for num in arr_counter.values():
-            heapq.heappush(max_heap, -num)
+        max_heap = [-num for num in arr_counter.values()]
+        heapq.heapify(max_heap)
 
-        result = 0
-        while arr_length > len(arr)//2:
-            arr_length -= -1 * heapq.heappop(max_heap)
-            result += 1
+        res = 0
+        while arr_len > len(arr) // 2:
+            arr_len -= -heapq.heappop(max_heap)
+            res += 1
 
-        return result
+        return res
+
 
 # @lc code=end

@@ -6,14 +6,16 @@
 
 # @lc code=start
 
-# * Fast and Slow Pointer Solution | O(n) Time | O(1) Space
+# * Fast & Slow Pointer Solution | O(n) Time | O(1) Space
 # * n -> The number of nodes in the linked list
+
 
 # Definition for singly-linked list.
 # class ListNode:
 #     def __init__(self, x):
 #         self.val = x
 #         self.next = None
+
 
 class Solution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:
@@ -25,5 +27,6 @@ class Solution:
                 return True
 
         return False
+
 
 # @lc code=end

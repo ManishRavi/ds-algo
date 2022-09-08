@@ -6,7 +6,9 @@
 
 # @lc code=start
 class Solution:
-    def findLadders(self, beginWord: str, endWord: str, wordList: List[str]) -> List[List[str]]:
+    def findLadders(
+        self, beginWord: str, endWord: str, wordList: List[str]
+    ) -> List[List[str]]:
         if endWord not in wordList:
             return []
 
@@ -18,7 +20,7 @@ class Solution:
         neighbors = defaultdict(list)
         for word in wordList:
             for i in range(word_size):
-                neighbors[f'{word[:i]}*{word[i+1:]}'].append(word)
+                neighbors[f"{word[:i]}*{word[i+1:]}"].append(word)
 
         # 2) do first bfs and build reversed neighbors list for second bfs
         reverse_neighbors = defaultdict(list)
@@ -28,7 +30,7 @@ class Solution:
             new_seen = set()
             for word in n_t_h:
                 for i in range(word_size):
-                    for neighbor in neighbors[f'{word[:i]}*{word[i+1:]}']:
+                    for neighbor in neighbors[f"{word[:i]}*{word[i+1:]}"]:
                         if neighbor in unseen:
                             reverse_neighbors[neighbor].append(word)
                             new_seen.add(neighbor)
@@ -60,5 +62,6 @@ class Solution:
             result.append(path)
 
         return result
+
 
 # @lc code=end

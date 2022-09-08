@@ -9,6 +9,7 @@
 # * Iterative BFS Solution | O((n^2)*m) Time | O((n^2)*m) Space
 # * n -> The length of wordList array | m -> The length of each string
 
+
 class Solution:
     def ladderLength(self, beginWord: str, endWord: str, wordList: List[str]) -> int:
         if endWord not in wordList:
@@ -22,27 +23,28 @@ class Solution:
         def build_graph():
             for word in wordList:
                 for i in range(len(word)):
-                    graph[word[:i] + "*" + word[i+1:]].append(word)
+                    graph[f"{word[:i]}*{word[i+1:]}"].append(word)
 
         build_graph()
-        # * BFS Traversal
+        # * Start BFS traversal.
         queue = collections.deque([beginWord])
-        visited = set([beginWord])
-        result = 1
+        visited_set = set([beginWord])
+        res = 1
         while queue:
             for _ in range(len(queue)):
-                word = queue.popleft()
-                if word == endWord:
-                    return result
+                cur_word = queue.popleft()
+                if cur_word == endWord:
+                    return res
 
-                for i in range(len(word)):
-                    for neighbour in graph[word[:i] + "*" + word[i+1:]]:
-                        if neighbour not in visited:
-                            queue.append(neighbour)
-                            visited.add(neighbour)
+                for i in range(len(cur_word)):
+                    for neighbor in graph[f"{cur_word[:i]}*{cur_word[i+1:]}"]:
+                        if neighbor not in visited_set:
+                            queue.append(neighbor)
+                            visited_set.add(neighbor)
 
-            result += 1
+            res += 1
 
         return 0
+
 
 # @lc code=end

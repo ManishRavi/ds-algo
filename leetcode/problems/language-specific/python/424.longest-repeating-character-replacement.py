@@ -9,28 +9,28 @@
 # * Two Pointers and Sliding Window Solution | O(n) Time | O(n) Space
 # * n -> The length of s string
 
+
 class Solution:
     def characterReplacement(self, s: str, k: int) -> int:
         s_counter = collections.defaultdict(int)
         max_count = 0
-        longest_substring_length = 0
+        longest_substring_len = 0
         left, right = 0, 0
         while right < len(s):
+            window_len = right - left + 1
             max_count = max(max_count, s_counter[s[right]] + 1)
-            window_length = right - left + 1
             # * Difference between window length and max count
-            # * should be less than or equal to k
-            # * (window_length - max_count <= k)
-            if window_length - max_count <= k:
+            # * should be less than or equal to k.
+            # * (window_len - max_count <= k)
+            if window_len - max_count <= k:
                 s_counter[s[right]] += 1
-                longest_substring_length = max(
-                    longest_substring_length, window_length)
+                longest_substring_len = max(longest_substring_len, window_len)
                 right += 1
-
             else:
                 s_counter[s[left]] -= 1
                 left += 1
 
-        return longest_substring_length
+        return longest_substring_len
+
 
 # @lc code=end

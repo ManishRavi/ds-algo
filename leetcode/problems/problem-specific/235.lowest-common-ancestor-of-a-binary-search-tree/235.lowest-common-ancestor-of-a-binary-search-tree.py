@@ -9,6 +9,7 @@
 # * Recursive DFS Solution | O(n) Time | O(h) Space
 # * n -> The number of nodes in the tree | h -> The height of the tree
 
+
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, x):
@@ -16,8 +17,11 @@
 #         self.left = None
 #         self.right = None
 
+
 class Solution:
-    def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
+    def lowestCommonAncestor(
+        self, root: "TreeNode", p: "TreeNode", q: "TreeNode"
+    ) -> "TreeNode":
         if not root or root == p or root == q:
             return root
 
@@ -29,5 +33,6 @@ class Solution:
             return left_node
 
         return right_node
+
 
 # @lc code=end

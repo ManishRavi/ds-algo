@@ -6,29 +6,31 @@
 
 # @lc code=start
 
-# * Recursive Backtracking Solution | O((4^n)/√n) Time | O((4^n)/√n) Space
-# * n -> Given n pairs
+# * Backtracking Solution | O((4^n)/√n) Time | O((4^n)/√n) Space
+# * n -> The given input
+
 
 class Solution:
     def generateParenthesis(self, n: int) -> List[str]:
-        result = []
+        res = []
 
-        def generateParenthesisHelper(stack=[], open=0, close=0):
+        def generateParenthesisHelper(open, close, stack):
             if open == close == n:
-                result.append(''.join(stack))
+                res.append("".join(stack))
                 return
 
             if open < n:
-                stack.append('(')
-                generateParenthesisHelper(stack, open+1, close)
+                stack.append("(")
+                generateParenthesisHelper(open + 1, close, stack)
                 stack.pop()
 
             if close < open:
-                stack.append(')')
-                generateParenthesisHelper(stack, open, close+1)
+                stack.append(")")
+                generateParenthesisHelper(open, close + 1, stack)
                 stack.pop()
 
-        generateParenthesisHelper()
-        return result
+        generateParenthesisHelper(0, 0, [])
+        return res
+
 
 # @lc code=end
