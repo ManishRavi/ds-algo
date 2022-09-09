@@ -6,7 +6,7 @@
 
 # @lc code=start
 
-# * Iterative Stack Solution | O(n) Time | o(n) Space
+# * Iterative Stack Solution | O(n) Time | O(n) Space
 # * n -> The length of heights array
 
 
