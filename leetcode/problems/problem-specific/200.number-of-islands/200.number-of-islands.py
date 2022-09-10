@@ -6,7 +6,7 @@
 
 # @lc code=start
 
-# * Recursive DFS Solution | O(mn) Time | O(1) Space
+# * Backtracking Solution | O(mn) Time | O(1) Space
 # * m -> The number of rows in the grid matrix | n -> The number of columns in the grid matrix
 
 

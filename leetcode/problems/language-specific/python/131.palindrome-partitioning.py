@@ -15,7 +15,7 @@ class Solution:
         res = []
 
         def partitionHelper(start_idx, partition):
-            if start_idx >= len(s):
+            if start_idx == len(s):
                 res.append(partition[:])
                 return
 

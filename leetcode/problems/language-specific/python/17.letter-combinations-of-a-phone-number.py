@@ -6,7 +6,7 @@
 
 # @lc code=start
 
-# * Backtracking Solution | O(4^n) Time | O(n) Space
+# * Backtracking Solution | O(n*(4^n)) Time | O(n) Space
 # * n -> The length of digits string
 
 
