@@ -1,7 +1,7 @@
 #
-# @lc app=leetcode id=200 lang=python3
+# @lc app=leetcode id=695 lang=python3
 #
-# [200] Number of Islands
+# [695] Max Area of Island
 #
 
 # @lc code=start
@@ -11,30 +11,31 @@
 
 
 class Solution:
-    def numIslands(self, grid: List[List[str]]) -> int:
+    def maxAreaOfIsland(self, grid: List[List[int]]) -> int:
         DIRECTIONS = [(-1, 0), (1, 0), (0, -1), (0, 1)]
         ROWS, COLS = len(grid), len(grid[0])
 
-        def numIslandsHelper(row, col):
+        def maxAreaOfIslandHelper(row, col):
             if (
                 not 0 <= row <= ROWS - 1
                 or not 0 <= col <= COLS - 1
-                or grid[row][col] == "0"
+                or grid[row][col] == 0
             ):
-                return
+                return 0
 
-            grid[row][col] = "0"
+            grid[row][col] = 0
+            cur_area = 0
             for d_row, d_col in DIRECTIONS:
-                numIslandsHelper(row + d_row, col + d_col)
+                cur_area += maxAreaOfIslandHelper(row + d_row, col + d_col)
 
-        no_of_islands = 0
+            return 1 + cur_area
+
+        max_area = 0
         for row in range(ROWS):
             for col in range(COLS):
-                if grid[row][col] == "1":
-                    numIslandsHelper(row, col)
-                    no_of_islands += 1
+                max_area = max(max_area, maxAreaOfIslandHelper(row, col))
 
-        return no_of_islands
+        return max_area
 
 
 # @lc code=end

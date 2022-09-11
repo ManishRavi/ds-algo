@@ -6,7 +6,7 @@
 
 # @lc code=start
 
-# * Backtracking Solution | O(mn) Time | O(mn) Space
+# * Recursive DFS Solution | O(mn) Time | O(mn) Space
 # * m -> The number of rows in the heights matrix | n -> The number of columns in the heights matrix
 
 

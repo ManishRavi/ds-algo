@@ -26,8 +26,8 @@ class Solution:
                 used.add(num)
                 permutation.append(num)
                 permuteHelper(used, permutation)
-                permutation.pop()
                 used.remove(num)
+                permutation.pop()
 
         permuteHelper(set(), [])
         return res

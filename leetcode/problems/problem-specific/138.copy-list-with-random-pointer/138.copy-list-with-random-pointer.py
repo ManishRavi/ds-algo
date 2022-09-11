@@ -22,23 +22,23 @@ class Node:
 
 class Solution:
     def copyRandomList(self, head: "Optional[Node]") -> "Optional[Node]":
-        original_to_copy_map = collections.defaultdict(lambda: None)
-        # * 1st Pass -> Copy a node and store the mapping of the original to copy in a hashmap.
+        original_clone_map = collections.defaultdict(lambda: None)
+        # * 1st Pass -> Clone a node and store the mapping of the original to clone in a hashmap.
         cur = head
         while cur:
-            original_to_copy_map[cur] = Node(cur.val)
+            original_clone_map[cur] = Node(cur.val)
             cur = cur.next
 
         # * 2nd Pass -> Populate the next and random pointers by leveraging a hashmap
-        # * to get direct access to its copy node from the original node.
+        # * to get direct access to its clone node from the original node.
         cur = head
         while cur:
-            copy_node = original_to_copy_map[cur]
-            copy_node.next = original_to_copy_map[cur.next]
-            copy_node.random = original_to_copy_map[cur.random]
+            clone_node = original_clone_map[cur]
+            clone_node.next = original_clone_map[cur.next]
+            clone_node.random = original_clone_map[cur.random]
             cur = cur.next
 
-        return original_to_copy_map[head]
+        return original_clone_map[head]
 
 
 # @lc code=end
