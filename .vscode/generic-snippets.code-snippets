@@ -59,12 +59,12 @@
 		],
 		"description": ""
 	},
-	"GBTS": {
+	"RGDFSS": {
 		"scope": "",
-		"prefix": "GBTS",
+		"prefix": "RGDFSS",
 		"body": [
 			"",
-			"# * Backtracking Solution | O(mn$1) Time | O(mn$2) Space",
+			"# * Recursive DFS Solution | O(mn$1) Time | O(mn$2) Space",
 			"# * m -> The number of rows in the $3 matrix | n -> The number of columns in the $3 matrix $0",
 			""
 		],

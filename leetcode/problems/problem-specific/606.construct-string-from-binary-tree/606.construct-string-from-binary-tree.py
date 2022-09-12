@@ -26,15 +26,16 @@ class Solution:
             if not root:
                 return
 
-            res.append(f"({root.val}" if res else str(root.val))
-            tree2strHelper(root.left)
+            res.append("(")
+            res.append(str(root.val))
             if root.right and not root.left:
                 res.append("()")
+            tree2strHelper(root.left)
             tree2strHelper(root.right)
             res.append(")")
 
         tree2strHelper(root)
-        return "".join(res[:-1])
+        return "".join(res[1:-1])
 
 
 # @lc code=end
