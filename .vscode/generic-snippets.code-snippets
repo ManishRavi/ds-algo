@@ -81,6 +81,17 @@
 		],
 		"description": ""
 	},
+	"DSUS": {
+		"scope": "",
+		"prefix": "DSUS",
+		"body": [
+			"",
+			"# * Disjoint Set Union Solution | O(v+e$1) Time | O(v+e$2) Space",
+			"# * v -> The number of vertices in the graph | e -> The number of edges in the graph $0",
+			""
+		],
+		"description": ""
+	},
 	"BTS": {
 		"scope": "",
 		"prefix": "BTS",
