@@ -28,14 +28,14 @@ class Solution:
             visited_set.add(cur_node)
             for next_node in range(points_len):
                 if next_node not in visited_set:
-                    x1, y1 = points[cur_node]
-                    x2, y2 = points[next_node]
-                    next_cost = self.get_manhattan_distance(x1, x2, y1, y2)
+                    next_cost = self._get_manhattan_distance(
+                        *points[cur_node], *points[next_node]
+                    )
                     heapq.heappush(min_heap, (next_cost, next_node))
 
         return min_cost
 
-    def get_manhattan_distance(self, x1, x2, y1, y2):
+    def _get_manhattan_distance(self, x1, y1, x2, y2):
         return abs(x1 - x2) + abs(y1 - y2)
 
 

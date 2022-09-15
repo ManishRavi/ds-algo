@@ -17,8 +17,7 @@ class Solution:
         # * Pair -> (distance, index)
         min_heap = []
         for idx, point in enumerate(points):
-            x, y = point
-            distance = self._get_euclidean_distance(x, 0, y, 0)
+            distance = self._get_euclidean_distance(*point, 0, 0)
             min_heap.append((distance, idx))
 
         heapq.heapify(min_heap)
@@ -29,7 +28,7 @@ class Solution:
 
         return res
 
-    def _get_euclidean_distance(self, x1, x2, y1, y2):
+    def _get_euclidean_distance(self, x1, y1, x2, y2):
         # * sqrt is optional here since we're just finding out the closest points but not the distance.
         # * So, comparing the values without sqrt would also work.
         return math.sqrt(((x1 - x2) ** 2) + ((y1 - y2) ** 2))
