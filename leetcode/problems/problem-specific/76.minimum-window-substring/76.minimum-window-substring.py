@@ -34,10 +34,10 @@ class Solution:
             # * Contract the window by moving the left pointer
             # * till we've a substring that has all the chars of t.
             while have_count == need_count:
-                cur_window_length = right - left + 1
-                if cur_window_length < min_window_len:
+                cur_window_len = right - left + 1
+                if cur_window_len < min_window_len:
                     min_window_range = [left, right]
-                    min_window_len = cur_window_length
+                    min_window_len = cur_window_len
 
                 left_val = s[left]
                 window_counter[left_val] -= 1
