@@ -34,12 +34,12 @@ class Solution:
             # * To handle negative values compare them with 0 to get the max value.
             # * Don't consider them as they don't add up to the max path sum value.
             left_node_path_sum = max(maxPathSumHelper(root.left), 0)
-            rigth_node_path_sum = max(maxPathSumHelper(root.right), 0)
+            right_node_path_sum = max(maxPathSumHelper(root.right), 0)
             # * Compute max path sum w/ split (Include both left and right nodes path sum).
             max_path_sum = max(
-                max_path_sum, root.val + left_node_path_sum + rigth_node_path_sum
+                max_path_sum, root.val + left_node_path_sum + right_node_path_sum
             )
-            return root.val + max(left_node_path_sum, rigth_node_path_sum)
+            return root.val + max(left_node_path_sum, right_node_path_sum)
 
         maxPathSumHelper(root)
         return max_path_sum

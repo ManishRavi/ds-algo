@@ -6,7 +6,7 @@
 
 # @lc code=start
 
-# * Trie and Backtracking Solution | O(n) Time | O(n) Space
+# * Trie and Backtracking Solution | O(n) addWord, O(26^n) search Time | O(n) Space
 # * n -> The number of characters in a given word
 
 
