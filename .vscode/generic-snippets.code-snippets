@@ -103,4 +103,92 @@
 		],
 		"description": ""
 	},
+	"RTD1DPS": {
+		"scope": "",
+		"prefix": "RTD1DPS",
+		"body": [
+			"",
+			"# * Recursive Top-Down Solution | O(n$1) Time | O(n$2) Space",
+			"# * n -> The length of $3 array $0",
+			""
+		],
+		"description": ""
+	},
+	"RBU1DPS": {
+		"scope": "",
+		"prefix": "RBU1DPS",
+		"body": [
+			"",
+			"# * Recursive Bottom-Up Solution | O(n$1) Time | O(n$2) Space",
+			"# * n -> The length of $3 array $0",
+			""
+		],
+		"description": ""
+	},
+	"ITD1DPS": {
+		"scope": "",
+		"prefix": "ITD1DPS",
+		"body": [
+			"",
+			"# * Iterative Top-Down Solution | O(n$1) Time | O(n$2) Space",
+			"# * n -> The length of $3 array $0",
+			""
+		],
+		"description": ""
+	},
+	"IBU1DPS": {
+		"scope": "",
+		"prefix": "IBU1DPS",
+		"body": [
+			"",
+			"# * Iterative Bottom-Up Solution | O(n$1) Time | O(n$2) Space",
+			"# * n -> The length of $3 array $0",
+			""
+		],
+		"description": ""
+	},
+	"RTD2DPS": {
+		"scope": "",
+		"prefix": "RTD2DPS",
+		"body": [
+			"",
+			"# * Recursive Top-Down Solution | O(mn$1) Time | O(mn$2) Space",
+			"# * m -> The number of rows in the $3 matrix | n -> The number of columns in the $3 matrix $0",
+			""
+		],
+		"description": ""
+	},
+	"RBU2DPS": {
+		"scope": "",
+		"prefix": "RBU2DPS",
+		"body": [
+			"",
+			"# * Recursive Bottom-Up Solution | O(mn$1) Time | O(mn$2) Space",
+			"# * m -> The number of rows in the $3 matrix | n -> The number of columns in the $3 matrix $0",
+			""
+		],
+		"description": ""
+	},
+	"ITD2DPS": {
+		"scope": "",
+		"prefix": "ITD2DPS",
+		"body": [
+			"",
+			"# * Iterative Top-Down Solution | O(mn$1) Time | O(mn$2) Space",
+			"# * m -> The number of rows in the $3 matrix | n -> The number of columns in the $3 matrix $0",
+			""
+		],
+		"description": ""
+	},
+	"IBU2DPS": {
+		"scope": "",
+		"prefix": "IBU2DPS",
+		"body": [
+			"",
+			"# * Iterative Bottom-Up Solution | O(mn$1) Time | O(mn$2) Space",
+			"# * m -> The number of rows in the $3 matrix | n -> The number of columns in the $3 matrix $0",
+			""
+		],
+		"description": ""
+	},
 }
