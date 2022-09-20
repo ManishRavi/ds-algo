@@ -7,18 +7,23 @@
 # @lc code=start
 
 # * Binary Search Solution | O(nlogn) Time | O(n) Space
-# * n -> Length of nums array
+# * n -> The length of nums array
+
 
 class Solution:
     def lengthOfLIS(self, nums: List[int]) -> int:
+        # * Stores the elements in ascending order so as to apply the binary search.
+        # * Final result might not contain the longest subsequence values
+        # * as we're overwriting the values to save space.
         res = []
         for num in nums:
-            if len(res) == 0 or num > res[-1]:
+            if not res or num > res[-1]:
                 res.append(num)
             else:
-                index = bisect.bisect_left(res, num)
-                res[index] = num
+                insert_idx = bisect.bisect_left(res, num)
+                res[insert_idx] = num
 
         return len(res)
+
 
 # @lc code=end
