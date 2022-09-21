@@ -6,7 +6,7 @@
 
 # @lc code=start
 
-# * Iterative Bottom-Up Solution | O(n^2) Time | O(n) Space
+# * Iterative Bottom-Up Solution | O(n*(sum(nums))) Time | O(sum(nums)) Space
 # * n -> The length of nums array
 
 
