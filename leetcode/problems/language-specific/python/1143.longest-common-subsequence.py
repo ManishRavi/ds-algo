@@ -15,7 +15,7 @@ class Solution:
         text1_len, text2_len = len(text1), len(text2)
         # * Create a 2-D DP with the rows as text1_len + 1 (Including empty string)
         # * and cols as text2_len + 1 (Including empty string).
-        dp = [[0 for _ in range(text2_len + 1)] for _ in range(text1_len + 1)]
+        dp = [[0] * (text2_len + 1) for _ in range(text1_len + 1)]
         # * Start the iteration from the first row and first col.
         for i in range(1, text1_len + 1):
             for j in range(1, text2_len + 1):

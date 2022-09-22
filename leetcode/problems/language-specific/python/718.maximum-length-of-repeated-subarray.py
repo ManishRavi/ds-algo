@@ -15,7 +15,7 @@ class Solution:
         nums1_len, nums2_len = len(nums1), len(nums2)
         # * Create a 2-D DP with the rows as nums1_len + 1 (Including empty subarray)
         # * and cols as nums2_len + 1 (Including empty subarray).
-        dp = [[0 for _ in range(nums2_len + 1)] for _ in range(nums1_len + 1)]
+        dp = [[0] * (nums2_len + 1) for _ in range(nums1_len + 1)]
 
         max_subarray_len = 0
         # * Start the iteration from the first row and first col.

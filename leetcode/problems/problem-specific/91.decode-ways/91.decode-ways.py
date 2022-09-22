@@ -12,20 +12,25 @@
 
 class Solution:
     def numDecodings(self, s: str) -> int:
-        @lru_cache(None)
+        s_len = len(s)
+        memcache = [0] * (s_len + 1)
+
         def numDecodingsHelper(start_idx):
-            if start_idx == len(s):
+            if start_idx == s_len:
                 return 1
             if s[start_idx] == "0":
                 return 0
+            if memcache[start_idx]:
+                return memcache[start_idx]
 
             # * 1 digit length.
             res = numDecodingsHelper(start_idx + 1)
             # * 2 digits length.
-            if start_idx + 1 < len(s) and (int(s[start_idx : start_idx + 2]) <= 26):
+            if start_idx + 1 < s_len and (int(s[start_idx : start_idx + 2]) <= 26):
                 res += numDecodingsHelper(start_idx + 2)
 
-            return res
+            memcache[start_idx] = res
+            return memcache[start_idx]
 
         return numDecodingsHelper(0)
 
