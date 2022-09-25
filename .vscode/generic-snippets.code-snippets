@@ -191,4 +191,26 @@
 		],
 		"description": ""
 	},
+	"KAS": {
+		"scope": "",
+		"prefix": "KAS",
+		"body": [
+			"",
+			"# * Kadane's Algorithm Solution | O(n$1) Time | O(1$2) Space",
+			"# * n -> The length of $3 array $0",
+			""
+		],
+		"description": ""
+	},
+	"GS": {
+		"scope": "",
+		"prefix": "GS",
+		"body": [
+			"",
+			"# * Greedy Solution | O(n$1) Time | O(1$2) Space",
+			"# * n -> The length of $3 array $0",
+			""
+		],
+		"description": ""
+	},
 }
