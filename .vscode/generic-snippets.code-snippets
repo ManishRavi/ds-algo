@@ -213,4 +213,26 @@
 		],
 		"description": ""
 	},
+	"MS": {
+		"scope": "",
+		"prefix": "MS",
+		"body": [
+			"",
+			"# * Math Solution | O(n$1) Time | O(1$2) Space",
+			"# * n -> The length of $3 array $0",
+			""
+		],
+		"description": ""
+	},
+	"BMS": {
+		"scope": "",
+		"prefix": "BMS",
+		"body": [
+			"",
+			"# * Bit Manipulation Solution | O(n$1) Time | O(1$2) Space",
+			"# * n -> The length of $3 array $0",
+			""
+		],
+		"description": ""
+	},
 }
