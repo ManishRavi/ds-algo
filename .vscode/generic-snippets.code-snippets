@@ -59,13 +59,35 @@
 		],
 		"description": ""
 	},
+	"RMGDFSS": {
+		"scope": "",
+		"prefix": "RMGDFSS",
+		"body": [
+			"",
+			"# * Recursive DFS Solution | O(mn$1) Time | O(mn$2) Space",
+			"# * m -> The number of rows in the $3 matrix | n -> The number of columns in the $3 matrix $0",
+			""
+		],
+		"description": ""
+	},
+	"IMGBFSS": {
+		"scope": "",
+		"prefix": "IMGBFSS",
+		"body": [
+			"",
+			"# * Iterative BFS Solution | O(mn$1) Time | O(mn$2) Space",
+			"# * m -> The number of rows in the $3 matrix | n -> The number of columns in the $3 matrix $0",
+			""
+		],
+		"description": ""
+	},
 	"RGDFSS": {
 		"scope": "",
 		"prefix": "RGDFSS",
 		"body": [
 			"",
-			"# * Recursive DFS Solution | O(mn$1) Time | O(mn$2) Space",
-			"# * m -> The number of rows in the $3 matrix | n -> The number of columns in the $3 matrix $0",
+			"# * Recursive DFS Solution | O(v+e$1) Time | O(v+e$2) Space",
+			"# * v -> The number of vertices in the graph | e -> The number of edges in the graph $0",
 			""
 		],
 		"description": ""
@@ -75,8 +97,8 @@
 		"prefix": "IGBFSS",
 		"body": [
 			"",
-			"# * Iterative BFS Solution | O(mn$1) Time | O(mn$2) Space",
-			"# * m -> The number of rows in the $3 matrix | n -> The number of columns in the $3 matrix $0",
+			"# * Iterative BFS Solution | O(v+e$1) Time | O(v+e$2) Space",
+			"# * v -> The number of vertices in the graph | e -> The number of edges in the graph $0",
 			""
 		],
 		"description": ""
