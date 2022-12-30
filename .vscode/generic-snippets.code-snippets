@@ -257,4 +257,15 @@
 		],
 		"description": ""
 	},
+	"PQS": {
+		"scope": "",
+		"prefix": "PQS",
+		"body": [
+			"",
+			"# * Priority Queue (Min Heap) Solution | O(nlogn$1) Time | O(n$2) Space",
+			"# * n -> The length of $3 array $0",
+			""
+		],
+		"description": ""
+	},
 }
