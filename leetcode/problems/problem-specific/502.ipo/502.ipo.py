@@ -6,8 +6,8 @@
 
 # @lc code=start
 
-# * Two Priority Queues Solution | O(klogn) Time | O(n) Space
-# * n -> The length of profits/capital array | k -> The given input
+# * Two Priority Queues Solution | O(nlogn) Time | O(n) Space
+# * n -> The length of profits/capital array
 
 
 class Solution:
