@@ -1,0 +1,10 @@
+#!/bin/bash
+set -e
+PWD=`pwd`
+
+
+cd "$PWD/leetcode/problems/scripts"
+sh create-problem-specific-file-py.sh
+cd "../problem-specific"
+git add .
+exit 0
