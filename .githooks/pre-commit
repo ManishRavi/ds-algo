@@ -1,10 +1,21 @@
 #!/bin/bash
+# * This is just an alias of .git/hooks/pre-commit file
 set -e
 PWD=`pwd`
 
 
+# * Create language-specific file
+
 cd "$PWD/leetcode/problems/scripts"
+sh create-language-specific-file-py.sh
+cd "../language-specific"
+git add .
+
+# * Create problem-specific file
+
+cd "../scripts"
 sh create-problem-specific-file-py.sh
 cd "../problem-specific"
 git add .
+
 exit 0
