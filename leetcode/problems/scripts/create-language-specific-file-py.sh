@@ -3,7 +3,7 @@ PARENT_PATH="leetcode/problems"
 LANGUAGE_SPECIFIC_DIRECTORY_NAME="language-specific"
 PROBLEM_SPECIFIC_DIRECTORY_NAME="problem-specific"
 SESSIONS_DIRECTORY_NAME="sessions"
-CURRENT_SESSION_DIRECTORY_NAME="2023-04-22_2023-??-??"
+CURRENT_SESSION_DIRECTORY_NAME="2023-05-01_2023-??-??"
 LANGUAGE="python"
 COUNT=0
 
@@ -24,12 +24,17 @@ do
         # echo $fileName $problemName
         # pwd
         languageSpecificPath=../../$LANGUAGE_SPECIFIC_DIRECTORY_NAME/$LANGUAGE
-        echo "COPY | $fileName | ${languageSpecificPath:6:${#languageSpecificPath}}"
-        
-        # mkdir -p "$languageSpecificPath"
-        cp "$fileName" "$languageSpecificPath"
+        if [[ -f "$languageSpecificPath/$fileName" ]]
+        then
+            echo "LANGUAGE SPECIFIC FILE EXISTS | $fileName | ${languageSpecificPath:6:${#languageSpecificPath}}"
+        else
+            echo "LANGUAGE SPECIFIC FILE COPY | $fileName | ${languageSpecificPath:6:${#languageSpecificPath}}"
+            
+            # mkdir -p "$languageSpecificPath"
+            cp "$fileName" "$languageSpecificPath"
 
-        COUNT=$((COUNT+1))
+            COUNT=$((COUNT+1))
+        fi
     fi
 done
 

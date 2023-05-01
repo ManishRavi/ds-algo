@@ -22,12 +22,17 @@ do
         # echo $fileName $problemName
         # pwd
         problemSpecificPath=../../$PROBLEM_SPECIFIC_DIRECTORY_NAME/$problemName
-        echo "COPY | $fileName | ${problemSpecificPath:6:${#problemSpecificPath}}"
+        if [[ -f "$problemSpecificPath/$fileName" ]]
+        then
+            echo "PROBLEM SPECIFIC FILE EXISTS | $fileName | ${problemSpecificPath:6:${#problemSpecificPath}}"
+        else
+            echo "PROBLEM SPECIFIC FILE COPY | $fileName | ${problemSpecificPath:6:${#problemSpecificPath}}"
         
-        mkdir -p "$problemSpecificPath"
-        cp "$fileName" "$problemSpecificPath"
+            mkdir -p "$problemSpecificPath"
+            cp "$fileName" "$problemSpecificPath"
 
-        COUNT=$((COUNT+1))
+            COUNT=$((COUNT+1))
+        fi
     fi
 done
 
