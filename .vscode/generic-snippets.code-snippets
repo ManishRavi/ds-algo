@@ -21,7 +21,7 @@
 		"body": [
 			"",
 			"# * Two Pointers and Sliding Window Solution | O(n$1) Time | O(n$2) Space",
-			"# * n -> The length of $3 $0",
+			"# * n -> The length of $3 array $0",
 			""
 		],
 		"description": ""
@@ -32,7 +32,7 @@
 		"body": [
 			"",
 			"# * Two Pointers Solution | O(n$1) Time | O(1$2) Space",
-			"# * n -> The length of $3 $0",
+			"# * n -> The length of $3 array $0",
 			""
 		],
 		"description": ""
@@ -252,6 +252,17 @@
 		"body": [
 			"",
 			"# * Math Solution | O(n$1) Time | O(1$2) Space",
+			"# * n -> The length of $3 array $0",
+			""
+		],
+		"description": ""
+	},
+	"BSS": {
+		"scope": "",
+		"prefix": "BSS",
+		"body": [
+			"",
+			"# * Binary Search Solution | O(logn$1) Time | O(1$2) Space",
 			"# * n -> The length of $3 array $0",
 			""
 		],
