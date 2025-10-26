@@ -15,12 +15,12 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// },
-	"TPSWS": {
+	"HTS": {
 		"scope": "",
-		"prefix": "TPSWS",
+		"prefix": "HTS",
 		"body": [
 			"",
-			"# * Two Pointers and Sliding Window Solution | O(n$1) Time | O(n$2) Space",
+			"# * Hash Table Solution | O(n$1) Time | O(n$2) Space",
 			"# * n -> The length of $3 array $0",
 			""
 		],
@@ -32,6 +32,28 @@
 		"body": [
 			"",
 			"# * Two Pointers Solution | O(n$1) Time | O(1$2) Space",
+			"# * n -> The length of $3 array $0",
+			""
+		],
+		"description": ""
+	},
+	"TPSWS": {
+		"scope": "",
+		"prefix": "TPSWS",
+		"body": [
+			"",
+			"# * Two Pointers and Sliding Window Solution | O(n$1) Time | O(n$2) Space",
+			"# * n -> The length of $3 array $0",
+			""
+		],
+		"description": ""
+	},
+	"BSS": {
+		"scope": "",
+		"prefix": "BSS",
+		"body": [
+			"",
+			"# * Binary Search Solution | O(logn$1) Time | O(1$2) Space",
 			"# * n -> The length of $3 array $0",
 			""
 		],
@@ -257,17 +279,6 @@
 		],
 		"description": ""
 	},
-	"BSS": {
-		"scope": "",
-		"prefix": "BSS",
-		"body": [
-			"",
-			"# * Binary Search Solution | O(logn$1) Time | O(1$2) Space",
-			"# * n -> The length of $3 array $0",
-			""
-		],
-		"description": ""
-	},
 	"BMS": {
 		"scope": "",
 		"prefix": "BMS",
@@ -284,10 +295,10 @@
 		"prefix": "PQS",
 		"body": [
 			"",
-			"# * Priority Queue (Min Heap) Solution | O(nlogn$1) Time | O(n$2) Space",
-			"# * n -> The length of $3 array $0",
+			"# * Priority Queue (Min$1 Heap) Solution | O(nlogn$2) Time | O(n$3) Space",
+			"# * n -> The length of $4 array $0",
 			""
 		],
 		"description": ""
-	},
+	}
 }
