@@ -26,9 +26,42 @@
 		],
 		"description": ""
 	},
+	"BKSS": {
+		"scope": "",
+		"prefix": "BKSS",
+		"body": [
+			"",
+			"# * Bucket Sort Solution | O(n$1) Time | O(n$2) Space",
+			"# * n -> The length of $3 array $0",
+			""
+		],
+		"description": ""
+	},
+	"PSSS": {
+		"scope": "",
+		"prefix": "PSSS",
+		"body": [
+			"",
+			"# * Prefix & Suffix Sum Solution | O(n$1) Time | O(n$2) Space",
+			"# * n -> The length of $3 array $0",
+			""
+		],
+		"description": ""
+	},
 	"TPS": {
 		"scope": "",
 		"prefix": "TPS",
+		"body": [
+			"",
+			"# * Two Pass Solution | O(n$1) Time | O(1$2) Space",
+			"# * n -> The length of $3 array $0",
+			""
+		],
+		"description": ""
+	},
+	"TPTRS": {
+		"scope": "",
+		"prefix": "TPTRS",
 		"body": [
 			"",
 			"# * Two Pointers Solution | O(n$1) Time | O(1$2) Space",
@@ -48,12 +81,56 @@
 		],
 		"description": ""
 	},
+	"SS": {
+		"scope": "",
+		"prefix": "SS",
+		"body": [
+			"",
+			"# * Stack Solution | O(n$1) Time | O(n$2) Space",
+			"# * n -> The length of $3 array $0",
+			""
+		],
+		"description": ""
+	},
 	"BSS": {
 		"scope": "",
 		"prefix": "BSS",
 		"body": [
 			"",
 			"# * Binary Search Solution | O(logn$1) Time | O(1$2) Space",
+			"# * n -> The length of $3 array $0",
+			""
+		],
+		"description": ""
+	},
+	"ILDHS": {
+		"scope": "",
+		"prefix": "ILDHS",
+		"body": [
+			"",
+			"# * Iterative Dummy Head Solution | O(n$1) Time | O(1$2) Space",
+			"# * n -> The number of nodes in the linked list $0",
+			""
+		],
+		"description": ""
+	},
+	"FSPS": {
+		"scope": "",
+		"prefix": "FSPS",
+		"body": [
+			"",
+			"# * Fast & Slow Pointer Solution | O(n$1) Time | O(1$2) Space",
+			"# * n -> The number of nodes in the linked list $0",
+			""
+		],
+		"description": ""
+	},
+	"FTHS": {
+		"scope": "",
+		"prefix": "FTHS",
+		"body": [
+			"",
+			"# * Floyd's Tortoise & Hare Cycle Detection Solution | O(n$1) Time | O(1$2) Space",
 			"# * n -> The length of $3 array $0",
 			""
 		],
@@ -92,6 +169,39 @@
 		],
 		"description": ""
 	},
+	"PQS": {
+		"scope": "",
+		"prefix": "PQS",
+		"body": [
+			"",
+			"# * Priority Queue (Min$1 Heap) Solution | O(nlogn$2) Time | O(n$3) Space",
+			"# * n -> The length of $4 array $0",
+			""
+		],
+		"description": ""
+	},
+	"BTS": {
+		"scope": "",
+		"prefix": "BTS",
+		"body": [
+			"",
+			"# * Backtracking Solution | O(n*(2^n)$1) Time | O(n$2) Space",
+			"# * n -> The length of $3 array $0",
+			""
+		],
+		"description": ""
+	},
+	"PTS": {
+		"scope": "",
+		"prefix": "PTS",
+		"body": [
+			"",
+			"# * Hash Table and Prefix Tree Solution | O(n$1) Time | O(n$2) Space",
+			"# * n -> The number of characters in a given word $0",
+			""
+		],
+		"description": ""
+	},
 	"RMGDFSS": {
 		"scope": "",
 		"prefix": "RMGDFSS",
@@ -109,6 +219,17 @@
 		"body": [
 			"",
 			"# * Iterative BFS Solution | O(mn$1) Time | O(mn$2) Space",
+			"# * m -> The number of rows in the $3 matrix | n -> The number of columns in the $3 matrix $0",
+			""
+		],
+		"description": ""
+	},
+	"IMGMSBFSS": {
+		"scope": "",
+		"prefix": "IMGMSBFSS",
+		"body": [
+			"",
+			"# * Iterative Multi-Source BFS Solution | O(mn$1) Time | O(mn$2) Space",
 			"# * m -> The number of rows in the $3 matrix | n -> The number of columns in the $3 matrix $0",
 			""
 		],
@@ -143,17 +264,6 @@
 			"",
 			"# * Disjoint Set Union Solution | O(v+e$1) Time | O(v+e$2) Space",
 			"# * v -> The number of vertices in the graph | e -> The number of edges in the graph $0",
-			""
-		],
-		"description": ""
-	},
-	"BTS": {
-		"scope": "",
-		"prefix": "BTS",
-		"body": [
-			"",
-			"# * Backtracking Solution | O(n*(2^n)$1) Time | O(n$2) Space",
-			"# * n -> The length of $3 array $0",
 			""
 		],
 		"description": ""
@@ -246,6 +356,17 @@
 		],
 		"description": ""
 	},
+	"DCS": {
+		"scope": "",
+		"prefix": "DCS",
+		"body": [
+			"",
+			"# * Divide & Conquer Solution | O(n$1) Time | O(1$2) Space",
+			"# * n -> The length of $3 array $0",
+			""
+		],
+		"description": ""
+	},
 	"KAS": {
 		"scope": "",
 		"prefix": "KAS",
@@ -286,17 +407,6 @@
 			"",
 			"# * Bit Manipulation Solution | O(n$1) Time | O(1$2) Space",
 			"# * n -> The length of $3 array $0",
-			""
-		],
-		"description": ""
-	},
-	"PQS": {
-		"scope": "",
-		"prefix": "PQS",
-		"body": [
-			"",
-			"# * Priority Queue (Min$1 Heap) Solution | O(nlogn$2) Time | O(n$3) Space",
-			"# * n -> The length of $4 array $0",
 			""
 		],
 		"description": ""
