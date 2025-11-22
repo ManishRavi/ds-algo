@@ -14,9 +14,9 @@ class Solution:
     def numSubseq(self, nums: List[int], target: int) -> int:
         res, MOD = 0, 10**9 + 7
         dp = [1]
-        for _ in range(1, len(nums) + 1):
+        for _ in range(len(nums)):
             dp.append(dp[-1] << 1 % MOD)
-        
+
         nums.sort()
         left, right = 0, len(nums) - 1
         while left <= right:
